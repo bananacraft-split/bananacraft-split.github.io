@@ -1,0 +1,20 @@
+{
+    "items": [
+        {
+            "name": "Air Totem",
+            "id": "air_totem",
+            "picture": "AirTotem.png",
+            "description": [
+                "This is line one of my description",
+                "Here is line 2",
+                "more lines here",
+                "Ik heb bijna geen ideeën meer",
+                "Finale line heer"
+            ],
+            "hover_description": [
+                "This is my air totem"
+            ],
+            "show_hover_description": true
+        }
+    ]
+}
