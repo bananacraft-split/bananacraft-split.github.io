@@ -12,7 +12,7 @@ export default class VanillaItem extends Component {
         <OverlayTrigger placement="top" overlay={
             <Tooltip className='mctooltip minecraft'><p>{item.readable}</p></Tooltip>
         }>
-      <a href={`https://minecraft.fandom.com/wiki/${id}/`}><img className="pixelated" src={item.texture} alt="" width={this.props.scale * 32} height={this.props.scale * 32} /></a>
+      <a href={`https://minecraft.fandom.com/wiki/${id}`}><img className="pixelated" src={item.texture} alt="" width={this.props.scale * 32} height={this.props.scale * 32} /></a>
       </OverlayTrigger>
     )
   }
