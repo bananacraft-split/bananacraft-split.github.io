@@ -12,10 +12,12 @@ import {
 import Home from './GeneralMod/Home';
 import RouteHelper from './RouteHelper';
 import ItemPage from './GeneralMod/ItemPage';
+import { Alert } from 'react-bootstrap';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <MenuBar />
+    <Alert variant="info">For the time being, The GamerJ57 mod page will be displaying information from a test mod designed to test this wiki's system</Alert>
     <Router>
       <Routes>
         <Route path="/" element={<App/>} />

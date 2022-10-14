@@ -21,7 +21,7 @@ code {
   top: 0;
   left: 0;
   background-color: #100010;
-  background-color: rgba(16,0,16,0.94);
+  background-color: rgb(16,0,16);
   padding: 0.375em;
   font-family: Minecraft,"WenQuanYi Bitmap Song",SimSun,Unifont,NISC18030,Beijing,Courier,sans-serif;
   font-size: 16px;
@@ -30,7 +30,10 @@ code {
   margin: 0.125em 0.25em;
   pointer-events: none;
   z-index: 9999;
-  --bs-tooltip-max-width: 20vw;
+  --bs-tooltip-max-width: 90vw;
+}
+.mainhandlabel {
+  margin-top: 16px;
 }
 .mctooltip::before {
   content: "";
@@ -43,6 +46,15 @@ code {
   border-style: none solid;
   border-color: rgba(16,0,16,0.94);
 }
+.tooltip p {
+  margin-bottom: 0px;
+  text-align: start;
+}
+.tooltip > .tooltip-inner {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.tooltip.in, .tooltip.show{opacity:1!important;}
 h1, h2 {
   text-decoration: underline;
 }
