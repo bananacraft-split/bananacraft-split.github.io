@@ -4,7 +4,6 @@ import ThreeDimensionalItemImage from './ThreeDimensionalItemImage'
 
 export default function Item(props) {
   
-  console.log(props)
   if(!props.item) {
     return null
   }
@@ -17,7 +16,7 @@ export default function Item(props) {
           {props.item.show_armor_trait?<p className="blue">&nbsp;{props.item.armor_trait}</p>:null}
           </Tooltip>
       }>
-    <a href={`/#/mod/${props.mod}/item/${props.item.id}/`}  style={{width:props.scale * 32, height:props.scale * 32, display: "block", margin:"auto"}}>{props.item.is3d?<ThreeDimensionalItemImage item={props.item} mod={props.mod} scale={props.scale} />:<img className="pixelated" src={`${props.mod}/data/assets/${props.item.picture}`} alt="" width={props.scale * 32} height={props.scale * 32} />}</a>
+    <a href={`/#/mod/${props.mod}/item/${props.item.id}/`}  style={{width:props.scale * 32, height:props.scale * 32, display: "block", margin:"auto", padding: "none"}}>{props.item.is3d?<ThreeDimensionalItemImage item={props.item} mod={props.mod} scale={props.scale} />:<img className="pixelated" src={`${props.mod}/data/assets/${props.item.picture}`} alt="" width={props.scale * 32} height={props.scale * 32} />}</a>
     </OverlayTrigger>
   )
 }

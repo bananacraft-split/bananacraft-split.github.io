@@ -30,7 +30,7 @@ export default class RecipeList extends Component {
     }
     else {
       return (
-        <>{this.state.recipes.map((x,i)=><Recipe key={i} recipe={x} mod={this.state.mod}/>)}</>
+        <>{this.state.recipes.map((x,i)=>{console.log(i);return<div key={i}><Recipe recipe={x} mod={this.state.mod}/><br/></div>})}</>
       )
     }
   }

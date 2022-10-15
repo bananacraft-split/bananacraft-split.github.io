@@ -6,7 +6,6 @@ import RecipeList from '../MinecraftStuff/RecipeList';
 export class ItemPage extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             mod: props.mod,
             name: props.item,
@@ -17,7 +16,6 @@ export class ItemPage extends Component {
     componentDidMount() {
         GetModData(`${this.state.mod}/data/items.json`).then(data=>{
             this.setState({item:data.items.filter(x=>x.id===this.state.name)[0], waitingForModItem:false})
-            console.log(data.items.filter(x=>x.id===this.state.name)[0])
         })
     }
     render() {
@@ -26,7 +24,6 @@ export class ItemPage extends Component {
         <div className='homepage'>Loading...</div>
         )}
         else {
-            console.log(this.state.item)
             return (
                 <div className='homepage'>
                     <h1>{this.state.item.name}</h1>

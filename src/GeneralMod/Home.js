@@ -7,7 +7,6 @@ import ItemList from '../MinecraftStuff/ItemList';
 export class Home extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
         this.state = {
             mod: props.mod,
             modData: "",

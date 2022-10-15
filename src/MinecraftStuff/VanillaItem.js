@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 import Textures from 'minecraft-textures/dist/textures/1.18'
-
+import Overrides from './ItemOverrides'
 
 export default class VanillaItem extends Component {
   render() {
-    console.log(this.props.item)
-    let item = Textures.items.filter(x=>x.id===this.props.item)[0]
-    let id = this.props.item.substring("minecraft:".length)
+    let id = Overrides[this.props.item]
+    if (id[0] === "#") {
+      return <VanillaItem mod={this.props.item} item={this.props.item + "#0"} scale={this.props.scale} />
+    }
+    let item = Textures.items.filter(x=>x.id==="minecraft:"+id)[0]
     return (
         <OverlayTrigger placement="top" overlay={
             <Tooltip className='mctooltip minecraft'><p>{item.readable}</p></Tooltip>
